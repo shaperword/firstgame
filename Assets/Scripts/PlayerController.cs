@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject groundCheck;
     public bool isOnGround;
 
-    bool palyerDead;
+    bool playerDead;
 
     void Start()
     {
@@ -67,7 +67,8 @@ public class PlayerController : MonoBehaviour
     
     public void PlayerDead()
     {
-        palyerDead = true;
+        playerDead = true;
+        GameManager.GameOver(playerDead);
     }
     private void OnDrawGizmosSelected()
     {
